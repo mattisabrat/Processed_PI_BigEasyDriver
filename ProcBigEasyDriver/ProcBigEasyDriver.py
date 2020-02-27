@@ -157,6 +157,13 @@ class ProcBigEasyDriver:
     def stop(self):
         self.queue.put(['end', 'end'])
 
+        #release the pins
+        self.dir.close()
+        self.ms1.close()
+        self.ms2.close()
+        self.ms3.close()
+        self.en.close()
+
 if __name__ =='__main__':
 
     #Logger
