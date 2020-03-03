@@ -41,6 +41,7 @@ class ProcBigEasyDriver:
         #Set initial pin conditions
         self.set_microstep(self.microstepping)
         self.en.on()
+        self.dir.off()
 
         #Start the motor in the next process
         args = (step, self.queue, self.rpm, self.microstepping, self.spr, self.Kp, self.Ki,)
@@ -106,6 +107,12 @@ class ProcBigEasyDriver:
 
             #Reset the time variable
             t1 = t2
+
+    def forwards(self):
+        self.dir.off()
+
+    def reverse(self):
+        self.dir.on()
 
     def set_rpm(self,rpm):
         self.rpm=rpm

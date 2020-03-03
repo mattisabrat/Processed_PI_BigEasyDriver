@@ -7,7 +7,7 @@ import setuptools
 setuptools.setup(
   name = 'ProcBigEasyDriver',         
   packages = ['ProcBigEasyDriver'],   
-  version = '0.0.2',      
+  version = '0.0.3',      
   license='GPLv3',        
   description = 'PI controller for continously rotating a stepper using the big easy driver in a background process on RPi',
   long_description=long_description,
